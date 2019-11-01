@@ -22,17 +22,17 @@ $selectColors.hide();
 const $optionColors = $('#color option');
 
 
-function selectAndChange(selected, index){
-  let firstSelected = [];
+function selectAndChange(selected, index){ // <--------------------- the problem starts here
+  let firstSelected = []; // array where colors are inserted
   if (selected) {
-    firstSelected = $optionColors.eq(index).removeClass('is-hidden');
-    for (var i = 0; i < firstSelected.length; i++) {
+    firstSelected = $optionColors.eq(index).removeClass('is-hidden'); // matching colors are displayed and inserted in the array
+    for (var i = 0; i < firstSelected.length; i++) { // remove the 'selected' attribute of all colors that returned TRUE
       $(firstSelected[i]).attr('selected', false);
     }
-    $(firstSelected[0]).attr('selected', true);
+    $(firstSelected[0]).attr('selected', true); // <--------------- it does not work
   }else{
-    firstSelected = $optionColors.eq(index).addClass('is-hidden');
-    for (var i = 0; i < firstSelected.length; i++) {
+    firstSelected = $optionColors.eq(index).addClass('is-hidden'); // those who don't match hide
+    for (var i = 0; i < firstSelected.length; i++) { // remove the 'selected' attribute of all colors that returned False
       $(firstSelected[i]).attr('selected', false);
     }
   }
@@ -41,12 +41,12 @@ function selectAndChange(selected, index){
 $('#design').on('change', function() {
 const chosenTShirt = event.target.value;
 
-    $('#color option').each(function(index){
-      $('label[for="color"]').text('Color');
-      $selectColors.show();
-      const $showColors = $optionColors.eq(index).text();
+    $('#color option').each(function(index){ // loop over #color 'option'
+      $('label[for="color"]').text('Color'); // replace the name 'Please select a T-shirt theme' to 'Color'
+      $selectColors.show(); // show the dropdown
+      const $showColors = $optionColors.eq(index).text(); // save the input text
         if (chosenTShirt === 'js puns') {
-          jsPuns = /\b(\w*JS\sPuns\w*)\b/.test($showColors);
+          jsPuns = /\b(\w*JS\sPuns\w*)\b/.test($showColors); // test to find out what colors belong to each design
           selectAndChange(jsPuns, index);
         }else if (chosenTShirt === 'heart js') {
           jsHeart = /\b(\w*JS\sshirt\w*)\b/.test($showColors);
