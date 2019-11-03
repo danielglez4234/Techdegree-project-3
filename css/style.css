@@ -194,6 +194,11 @@ option {
 	margin-top: 1.25em;
 }
 
+.credit_for_the_bacground{
+  text-shadow: 2px 1px 0 rgb(42, 43, 38);
+  color: #e3e1e0;
+}
+
 /* =================================
   Helper Classes
 ==================================== */
