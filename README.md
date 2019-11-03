@@ -4,7 +4,9 @@
 I attempted to earn an “Exceeds Expectations” grade. “Extra Credit” features I added:
 
 T Shirt Section
-Conditional Error Message (only on Email) 
+
+Conditional Error Message (only on Email)
+
 Real-time Error Messages
 
 * Display of the validation errors
