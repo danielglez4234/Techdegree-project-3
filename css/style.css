@@ -144,6 +144,37 @@ option {
 /* =================================
   Page Styles
 ==================================== */
+.contein_error_message{
+  position: relative;
+  height: 60px;
+}
+.error_message{
+  color: white;
+  background-color: #f88742;
+  text-align: center;
+  padding: 10px 10px;
+  position: absolute;
+  margin-top: -5px;
+}.error_message:after {
+      bottom: 100%;
+      left: 7%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-bottom-color: #f88742;
+      border-width: 10px;
+      margin-left: -10px;
+    }
+.error_message_submit{
+  color: white;
+  background-color: #f84242;
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 18px;
+}
 
 .container {
 	margin: auto;
