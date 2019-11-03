@@ -3,18 +3,20 @@
 
 I attempted to earn an “Exceeds Expectations” grade. “Extra Credit” features I added:
 
-T Shirt Section
+T Shirt Section,
+ Conditional Error Message (only on Email),
+ Real-time Error Messages
 
-Conditional Error Message (only on Email)
+* Display of the validation errors:
 
-Real-time Error Messages
+ -All of them except for the error of the 'Activities' section are displayed in Real Time.
 
-* Display of the validation errors
+ The email input has two different errors:
+      - when the format is not valid
+      - when the input is empty
 
-- All of them except for the error of the 'Activities' section are displayed in Real Time
-- The email input has two different errors
-      .- when the format is not valid
-      .- when the input is empty
-- The activity section error is shown if the form is submitted and if at least one of the checkboxes has not yet been selected
-- The payment section is only validated if it is selected
-- The register button prevents sending if there is any error
+ -The activity section error is shown if the form is submitted and if at least one of the -checkboxes has not yet been selected.
+
+ -The payment section is only validated if it is selected.
+
+ -The register button prevents sending if there is any error.
